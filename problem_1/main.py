@@ -15,11 +15,11 @@ class ListNode:
     """Definition for singly-linked list."""
 
     def __init__(self, x):
-        self.val = x
+        self.val: int = x
         self.next = None
 
 
-def add_two_numbers(l1, l2, c=0):
+def add_two_numbers(l1: ListNode, l2: ListNode, c: int = 0) -> ListNode:
     """Solution in ?? time, ?? space."""
 
     while l1 is not None or c > 0:

@@ -1,11 +1,12 @@
 import pytest
+from typing import Callable, List
 
 from problem_1.main import ListNode, add_two_numbers
 
 
 @pytest.fixture
-def create_linked_list():
-    def make_linked_list(lst):
+def create_linked_list() -> Callable:
+    def make_linked_list(lst: List[int]) -> ListNode:
         result = []
         prev_el = None
         for el in lst:
@@ -27,7 +28,7 @@ def create_linked_list():
         ([9, 9, 9], [9, 9, 9], [8, 9, 9, 1])
     )
 )
-def test_solution(list1, list2, expected_result, create_linked_list):
+def test_solution(list1: List[int], list2: List[int], expected_result: List[int], create_linked_list):
     l1 = create_linked_list(list1)
     l2 = create_linked_list(list2)
 
