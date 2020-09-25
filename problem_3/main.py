@@ -7,7 +7,10 @@
 # Output: [1, 1, 2, 2, 3, 3, 3]
 
 
-def sort_list(lst: list) -> list:
+from typing import List
+
+
+def sort_list(lst: List[int]) -> List[int]:
     """Solution in O(n) time, O(n) space."""
 
     sorted_list = []
@@ -23,7 +26,7 @@ def sort_list(lst: list) -> list:
     return sorted_list
 
 
-def sort_list_in_constant_space(lst: list) -> list:
+def sort_list_in_constant_space(lst: List[int]) -> List[int]:
     """Solution in O(n) time, O(1) space."""
 
     one_count = 0  # count of "1" elements

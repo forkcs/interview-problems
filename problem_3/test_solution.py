@@ -1,4 +1,5 @@
 import pytest
+from typing import List
 
 from problem_3.main import sort_list, sort_list_in_constant_space
 
@@ -14,12 +15,12 @@ test_lists = [
 
 
 @pytest.mark.parametrize('lst, expected', test_lists)
-def test_solution(lst: list, expected: list):
+def test_solution(lst: List[int], expected: List[int]):
     sorted_list = sort_list(lst)
     assert sorted_list == expected
 
 
 @pytest.mark.parametrize('lst, expected', test_lists)
-def test_constant_space_solution(lst: list, expected: list):
+def test_constant_space_solution(lst: List[int], expected: List[int]):
     sorted_list = sort_list_in_constant_space(lst)
     assert sorted_list == expected
