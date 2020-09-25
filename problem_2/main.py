@@ -10,7 +10,7 @@
 # Output: 10
 
 
-def length_of_the_longest_substring(s: str):
+def length_of_the_longest_substring(s: str) -> int:
     """Solution in O(n) time, O(1) space."""
 
     start = 0
