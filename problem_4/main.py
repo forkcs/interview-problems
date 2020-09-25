@@ -18,6 +18,8 @@ from typing import List, Tuple
 
 
 def find_first_and_last_indicies(lst: List[int], target: int) -> Tuple[int, int]:
+    """Solution in O(n) time, O(1) space."""
+
     first = -1
     last = -1
     for i in range(len(lst)):
