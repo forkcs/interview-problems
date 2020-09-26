@@ -11,7 +11,7 @@
 
 
 def length_of_the_longest_substring(s: str) -> int:
-    """Solution in O(n) time, O(1) space."""
+    """Solution in O(?) time, O(1) space."""
 
     start = 0
     end = 1
