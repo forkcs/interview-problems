@@ -10,22 +10,6 @@
 from typing import List
 
 
-def sort_list(lst: List[int]) -> List[int]:
-    """Solution in O(n) time, O(n) space."""
-
-    sorted_list = []
-    one_count = 0  # count of "1" elements
-    for el in lst:
-        if el == 1:
-            sorted_list.insert(0, el)
-            one_count += 1
-        elif el == 2:
-            sorted_list.insert(one_count, el)
-        else:
-            sorted_list.append(el)
-    return sorted_list
-
-
 def sort_list_in_constant_space(lst: List[int]) -> List[int]:
     """Solution in O(n) time, O(1) space."""
 
