@@ -14,9 +14,17 @@
 class ListNode:
     """Definition for singly-linked list."""
 
-    def __init__(self, x):
-        self.val: int = x
+    def __init__(self, x: int):
+        self.val = x
         self.next = None
+
+    def __eq__(self, other):
+        while self.next is not None:
+            if self.val != other.val:
+                return False
+            return self.next.__eq__(other.next)
+
+        return True
 
 
 def add_two_numbers(l1: ListNode, l2: ListNode, c: int = 0) -> ListNode:

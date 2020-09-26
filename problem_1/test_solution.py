@@ -34,7 +34,4 @@ def test_solution(list1: List[int], list2: List[int], expected_result: List[int]
 
     solution = add_two_numbers(l1, l2)
     expected = create_linked_list(expected_result)
-    while expected:
-        assert solution.val == expected.val
-        solution = solution.next
-        expected = expected.next
+    assert solution == expected
