@@ -16,9 +16,9 @@ from typing import List
 def two_sum(lst: List[int], k: int) -> bool:
     """Solution in O(n) time, O(n) space."""
 
-    complements = []
+    complements = set()
     for el in lst:
         if el in complements:
             return True
-        complements.append(k - el)
+        complements.add(k - el)
     return False
