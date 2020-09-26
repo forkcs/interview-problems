@@ -13,14 +13,38 @@ class ListNode:
         self.val = x
         self.next = None
 
+    def __eq__(self, other):
+        while self.next is not None:
+            if self.val != other.val:
+                return False
+            return self.next.__eq__(other.next)
 
-def reverse_singly_linked_list_iteratively(node: ListNode) -> ListNode:
-    """Solution in O(?) time, O(?) space."""
-
-    pass
+        return True
 
 
-def reverse_singly_linked_list_recursively(node: ListNode) -> ListNode:
-    """Solution in O(?) time, O(?) space."""
+def reverse_singly_linked_list_iteratively(head: ListNode) -> ListNode:
+    """Solution in O(n) time, O(1) space."""
 
-    pass
+    previous = None
+
+    while head is not None:
+        following = head.next
+        head.next = previous
+        previous = head
+        head = following
+
+    return previous
+
+
+def reverse_singly_linked_list_recursively(head: ListNode) -> ListNode:
+    """Solution in O(n) time, O(n) space."""
+
+    if head.next is None:
+        return head
+
+    rest = reverse_singly_linked_list_recursively(head.next)
+
+    head.next.next = head
+    head.next = None
+
+    return rest
