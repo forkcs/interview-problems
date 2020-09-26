@@ -9,6 +9,8 @@
 
 
 class ListNode:
+    """Definition for singly-linked list."""
+
     def __init__(self, x: int):
         self.val = x
         self.next = None
